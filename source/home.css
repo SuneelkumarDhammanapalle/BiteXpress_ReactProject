@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+  --primary: #2c3e50;
+  --accent: #e67e22;
+  --gold: #ffd700;
+  --light-bg: #f8f9fa;
+  --dark: #222;
+  --shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ========================
+    GLOBAL STYLES & RESETS
+    ======================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* New CSS to style the clickable cards */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%; /* Ensures the link covers the full height of the column */
+}
+
+/* ========================
+    HERO SECTION
+    ======================== */
+/* === HERO SECTION === */
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: none; /* Removed the background image */
+}
+
+/* New CSS for the background video */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.home-hero::before {
+  /* Removed the gradient overlay */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none; 
+  z-index: 2; 
+}
+
+@keyframes gradientShift {
+  from { background: linear-gradient(135deg, rgba(44,62,80,0.8), rgba(230,126,34,0.7)); }
+  to { background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(255,215,0,0.6)); }
+}
+
+.hero-text-content {
+  position: relative;
+  z-index: 3; /* Ensure text is above the overlay */
+  max-width: 850px;
+  padding: 2rem;
+}
+
+.hero-text-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-text-content h1 span {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(255,215,0,0.8);
+}
+
+.hero-text-content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  opacity: 0.9;
+}
+
+.explore-btn {
+  background: var(--gold);
+  color: var(--dark);
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.explore-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* ========================
+    HIGHLIGHTS SECTION
+    ======================== */
+.home-highlights {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.home-highlights h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.highlight-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.highlight-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(230, 126, 34, 0.5);
+}
+
+.highlight-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover img {
+  transform: scale(1.08);
+}
+
+.highlight-card h4 {
+  color: var(--accent);
+  margin-top: 10px;
+}
+
+/* ========================
+    ABOUT SECTION
+    ======================== */
+.home-about {
+  width: 100vw;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #2c3e50, #e67e22);
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.home-about h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffd700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.feature-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* ========================
+    REVIEWS SECTION
+    ======================== */
+.home-reviews {
+  padding: 5rem 2rem;
+  background: var(--light-bg);
+}
+
+.home-reviews h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.review-card p {
+  font-style: italic;
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+
+.review-card h4 {
+  margin-top: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ========================
+    RESPONSIVE DESIGN REFINEMENTS
+    ======================== */
+@media (max-width: 768px) {
+  /* Adjusts the hero text for smaller screens */
+  .hero-text-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .hero-text-content p {
+    font-size: 1rem;
+  }
+
+  /* Adjusts section padding for better spacing on mobile */
+  .home-highlights,
+  .home-about,
+  .home-reviews {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Reduces highlight card image size on small screens */
+  .highlight-card img {
+    height: 150px;
+  }
+}

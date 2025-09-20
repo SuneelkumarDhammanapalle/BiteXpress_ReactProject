@@ -1,0 +1,98 @@
+/* Make entire page full width */
+.orders-wrapper {
+  width: 100vw;
+  padding: 40px 5%;
+  background: linear-gradient(135deg, #f9f9f9, #eef2f7);
+  min-height: 100vh;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 40px;
+}
+
+/* Empty State */
+.orders-empty {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+/* Grid Layout - No Bootstrap Rows */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Order Card */
+.order-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.order-header h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Items */
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.order-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.order-items li:last-child {
+  border-bottom: none;
+}
+
+/* Totals */
+.order-totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.total-amount {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.order-footer {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 10px;
+}

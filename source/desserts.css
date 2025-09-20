@@ -1,0 +1,252 @@
+/* === PAGE BACKGROUND === */
+.desserts-bg {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fceabb, #f8b5a0); /* A soft, peachy gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* === CONTAINER === */
+.container-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* === TYPOGRAPHY === */
+#font {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #5a3e36; /* A rich brown for text contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7f5539; /* A warm, inviting brown */
+  position: relative;
+  text-align: center;
+}
+
+/* === FILTER BUTTONS === */
+.filter-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 1.5rem 0;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #5a3e36;
+  border: 2px solid transparent;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px); /* Glass effect */
+  transition: all 0.35s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(90, 62, 54, 0.1);
+}
+
+.filter-btn:hover {
+  background: linear-gradient(135deg, #f28482, #e5989b);
+  color: #fff;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 22px rgba(229, 152, 155, 0.4);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #e5989b, #f28482);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 28px rgba(242, 132, 130, 0.45);
+  transform: translateY(-4px) scale(1.08);
+  letter-spacing: 0.7px;
+}
+
+/* === PAGINATION BUTTONS === */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pagination-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #5a3e36;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f8b5a0, #f28482);
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(242, 132, 130, 0.35);
+}
+
+.pagination-btn.active-btn {
+  background: linear-gradient(135deg, #f28482, #e5989b);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(229, 152, 155, 0.45);
+  transform: translateY(-3px) scale(1.08);
+}
+
+.disabled-btn {
+  background: #f2e9e4 !important;
+  color: #b08968 !important;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  opacity: 0.7;
+}
+
+/* === CAROUSEL STYLES === */
+.carousel-section {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.product-carousel .react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.carousel-product-card {
+  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-product-card:hover {
+  transform: translateY(-8px);
+}
+
+.carousel-product-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.carousel-product-card:hover .carousel-product-img {
+  transform: scale(1.05);
+}
+
+.carousel-card-body {
+  height: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.carousel-card-body .card-title {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* === PRODUCT CARD GRID === */
+.products-grid-section {
+  width: 100%;
+}
+
+.product-card {
+  border: none !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.image-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.12);
+}
+
+.card-title {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  color: #2c3e50;
+}
+
+.card-text {
+  font-size: 0.95rem !important;
+  color: #7f8c8d !important;
+}
+
+.price-tag {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #f28482 !important;
+  margin: 12px 0 !important;
+}
+
+.btn-add {
+  background: linear-gradient(90deg, #f28482, #e5989b) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  padding: 12px 0 !important;
+  border: none !important;
+  font-size: 1.05rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(242, 132, 130, 0.3) !important;
+}
+
+.btn-add:hover {
+  background: linear-gradient(90deg, #e5989b, #f28482) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(229, 152, 155, 0.4) !important;
+}
+
+.btn-add:active {
+  transform: scale(0.96);
+}
