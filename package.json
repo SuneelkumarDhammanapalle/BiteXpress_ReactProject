@@ -1,0 +1,46 @@
+{
+  "name": "react_bitexpress",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.1",
+    "@fortawesome/free-solid-svg-icons": "^7.0.1",
+    "@fortawesome/react-fontawesome": "^3.0.2",
+    "@reduxjs/toolkit": "^2.9.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "framer-motion": "^12.23.13",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.1.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.1.1",
+    "react-multi-carousel": "^2.8.6",
+    "react-redux": "^9.2.0",
+    "react-rewards": "^2.1.0",
+    "react-router-dom": "^7.9.1",
+    "react-slick": "^0.31.0",
+    "react-toastify": "^11.0.5",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.23.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "sass": "^1.92.1",
+    "vite": "^7.1.2"
+  }
+}
